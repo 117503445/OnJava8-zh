@@ -82,6 +82,11 @@ yarn docs:dev
 
 # 本地阅读
 http://localhost:8080/doc-onjava8/
+
+docker build -t onjava8-builder -f Dockerfile.builder .
+
+docker run --rm -v $PWD:/workspace onjava8-builder
+# ./docs/.vitepress/dist
 ```
 
 ## License
