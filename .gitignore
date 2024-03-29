@@ -1,2 +1,4 @@
 node_modules/
-docs/.vuepress/dist/
+.pnpm-store
+docs/.vitepress/cache
+docs/.vitepress/dist

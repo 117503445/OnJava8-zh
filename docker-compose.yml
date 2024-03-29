@@ -1,0 +1,10 @@
+services:
+  onjava-dev:
+    build:
+      context: ./
+      dockerfile: Dockerfile_dev
+    container_name: onjava
+    volumes:
+        - './:/workspace'
+    stdin_open: true
+    tty: true
