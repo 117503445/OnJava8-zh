@@ -9,9 +9,11 @@ jobs:
     steps:
       # https://github.com/actions/checkout
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - run: docker build -t onjava8-builder -f Dockerfile.builder .
       - run: docker run --rm -v $PWD:/workspace onjava8-builder
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
