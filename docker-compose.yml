@@ -2,7 +2,7 @@ services:
   onjava-dev:
     build:
       context: ./
-      dockerfile: Dockerfile_dev
+      dockerfile: Dockerfile.dev
     container_name: onjava
     volumes:
         - './:/workspace'

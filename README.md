@@ -2,7 +2,7 @@
 
 OnJava8 中文翻译
 
-在线阅读：[http://gdut_yy.gitee.io/doc-onjava8/](http://gdut_yy.gitee.io/doc-onjava8/)
+在线阅读：[onjava8-zh](https://onjava8-zh.pages.dev/)
 
 <img src="./docs/cover.png" width=40%>
 
@@ -59,34 +59,11 @@ OnJava8 中文翻译
 - [附录:C++和 Java 的优良传统](docs/appendices/app-the-positive-legacy-of-c-plus-plus-and-java.md)
 - [附录:成为一名程序员](docs/appendices/app-becoming-a-programmer.md)
 
-## 本地开发 & 阅读
+## dist 构建
 
-本项目基于 vuepress 进行开发，以提供比 github mardown 更佳的阅读体验
-
-依赖于 `node.js`、`yarn`、`vuepress` 等环境
-
-```sh
-# node
-node -v
-> v10.14.1
-# yarn
-yarn -v
-> 1.13.0
-# vuepress
-yarn global add vuepress
-
-# 本地开发
-git clone https://github.com/gdut-yy/OnJava8-zh.git
-cd OnJava8-zh
-yarn docs:dev
-
-# 本地阅读
-http://localhost:8080/doc-onjava8/
-
-docker build -t onjava8-builder -f Dockerfile.builder .
-
-docker run --rm -v $PWD:/workspace onjava8-builder
-# ./docs/.vitepress/dist
+```bash
+# 基于 Docker 构建, 生成于 ./docs/.vitepress/dist
+./docker-build.sh
 ```
 
 ## License
